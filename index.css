@@ -1,0 +1,58 @@
+
+body {
+    background-color: #131316;
+    color: white;
+    font-family: cursive;
+    padding: 0;
+    margin: 0;
+    font-size: 2em;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    padding: 100px;
+    min-height: 100vh;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.remove{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+}
+
+@media(prefers-reduced-motion){
+    .hidden {
+        transition: none;
+    }
+}
+
+.logos {
+    display: flex;
+}
+
+.logos .logo{
+    padding: 5px;
+}
+
+.logo:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.logo:nth-child(3) {
+    transition-delay: 400ms;
+}
